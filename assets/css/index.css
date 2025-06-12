@@ -12,6 +12,7 @@ header {
   text-align: center;
   border-bottom: 1px solid #333333;
 }
+
 header a {
   color: #ffffff;
   text-decoration: none;
@@ -30,9 +31,10 @@ header a:hover {
   color: #ffffff;
   font-weight: bold;
 }
-span{
-	color: red;
-	font-weight: bolder;
+
+span {
+  color: red;
+  font-weight: bolder;
 }
 
 #header_btn {
@@ -54,6 +56,7 @@ span{
   border-radius: 5px;
   font-weight: bold;
 }
+
 #hero {
   background: black;
   padding: 5em;
@@ -74,8 +77,7 @@ span{
 
 #about {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   padding: 5em;
   background-color: #333333;
   color: #ffffff;
@@ -93,10 +95,9 @@ span{
   border: 5px solid #ff6600;
 }
 
-#about h2{
-	color: #ff6600;
+#about h2 {
+  color: #ff6600;
 }
-
 
 #projects {
   background-color: #000000;
@@ -156,8 +157,8 @@ span{
   color: #ffffff;
 }
 
-#contact h2{
-	font-size: 45px;
+#contact h2 {
+  font-size: 45px;
 }
 
 #contact form {
@@ -232,103 +233,184 @@ footer a:hover {
   color: #ff6600;
 }
 
-
-
-
-
-.download_btn{
-	text-decoration: none;
-	color: white;
-	background-color: #ff6600;
-	font-weight: bold;
-	border-radius: 10px;
-	width: 200px;
-	padding: 15px;
-	height: auto;
-	border: none;
+.download_btn {
+  text-decoration: none;
+  color: white;
+  background-color: #ff6600;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 200px;
+  padding: 15px;
+  height: auto;
+  border: none;
 }
 
-
-.download_btn:hover{
-	color: #ff6600;
-	background-color: black;
-	font-weight: bold;
-	border-radius: 10px;
-	width: 200px;
-	padding: 15px;
-	height: auto;
-	border: none;
+.download_btn:hover {
+  color: #ff6600;
+  background-color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 200px;
+  padding: 15px;
+  height: auto;
+  border: none;
 }
-
 
 .social-icon {
   width: 40px;
   height: 40px;
 }
 
-
-.social-icon:hover{
-	width: 50px;
-	height: 50px;
+.social-icon:hover {
+  width: 50px;
+  height: 50px;
 }
 
 /* Mobile devices (max-width: 768px) */
 @media only screen and (max-width: 768px) {
-  /* Make the header links stack vertically */
+  body {
+    font-size: 16px;
+  }
   header {
-    flex-direction: column;
-    align-items: center;
+    padding: 0.5em;
   }
-  
-  header a {
-    margin: 0.5em 0;
-  }
-  
-  /* Adjust the hero section */
   #hero {
     padding: 2em;
+    height: auto;
   }
-  
   #hero_inner {
-    max-width: 100%;
+    height: auto;
+    padding: 1em;
   }
-  
-  /* Make the about section stack vertically */
   #about {
-    flex-direction: column;
+    padding: 2em;
+    flex-direction: column-reverse;
   }
-  
   #about div {
-    margin: 1em 0;
+    flex-basis: 100%;
+    margin: 0.5em;
   }
-  
-  /* Adjust the projects section */
+  #about img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #ff6600;
+  }
   #projects {
-    flex-direction: column;
+    padding: 2em;
   }
-  
   #projects div {
-    margin: 1em 0;
+    margin: 0.5em;
+    padding: 2em;
   }
-  
-  /* Adjust the skills section */
   #skills {
+    padding: 2em;
     flex-direction: column;
   }
-  
   #skills div {
-    margin: 1em 0;
+    flex-basis: 100%;
+    margin: 0.5em;
+  }
+  #contact {
+    padding: 2em;
+  }
+  #contact form {
+    padding: 1em;
+  }
+
+  #desktop-banner{
+    display: none;
   }
 }
 
 /* Tablet devices (min-width: 769px) and (max-width: 1024px) */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Adjust the hero section */
+  body {
+    font-size: 18px;
+  }
+  header {
+    padding: 1em;
+  }
   #hero {
     padding: 3em;
+    height: auto;
   }
-  
   #hero_inner {
-    max-width: 80%;
+    height: auto;
+    padding: 1.5em;
+  }
+  #about {
+    padding: 3em;
+  }
+  #about div {
+    flex-basis: 40%;
+    margin: 1em;
+  }
+  #projects {
+    padding: 3em;
+  }
+  #projects div {
+    margin: 1em;
+  }
+  #skills {
+    padding: 3em;
+  }
+  #skills div {
+    flex-basis: 40%;
+    margin: 1em;
+  }
+  #contact {
+    padding: 3em;
+  }
+  #contact form {
+    padding: 1.5em;
+  }
+}
+
+/* Desktop devices (min-width: 1025px) */
+@media only screen and (min-width: 1025px) {
+  body {
+    font-size: 20px;
+  }
+  header {
+    padding: 1.5em;
+  }
+  #hero {
+    padding: 5em;
+    height: 400px;
+  }
+  #hero_inner {
+    height: 400px;
+    padding: 2em;
+  }
+  #about {
+    padding: 5em;
+  }
+  #about div {
+    flex-basis: 40%;
+    margin: 1em;
+  }
+  #projects {
+    padding: 5em;
+  }
+  #projects div {
+    margin: 1em;
+  }
+  #skills {
+    padding: 5em;
+  }
+  #skills div {
+    flex-basis: 40%;
+    margin: 1em;
+  }
+  #contact {
+    padding: 5em;
+  }
+  #contact form {
+    padding: 2em;
+  }
+
+  #mobile-banner{
+    display: none;
   }
 }
