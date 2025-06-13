@@ -12,7 +12,6 @@ body {
   height: 100%;
 }
 
-
 header {
   background-color: #000000;
   padding: 1em;
@@ -117,6 +116,10 @@ span {
   margin: 1em;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#projects div a.download_btn {
+  margin: 0.5em;
 }
 
 #projects h2 {
@@ -309,6 +312,14 @@ footer a:hover {
   #projects div {
     margin: 0.5em;
     padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #projects div a.download_btn {
+    width: 100%;
+    text-align: center;
+    margin: 0.5em 0;
   }
   #skills {
     padding: 2em;
@@ -359,6 +370,9 @@ footer a:hover {
   #projects div {
     margin: 1em;
   }
+  #projects div a.download_btn {
+    margin: 0.5em;
+  }
   #skills {
     padding: 3em;
   }
@@ -402,6 +416,9 @@ footer a:hover {
   }
   #projects div {
     margin: 1em;
+  }
+  #projects div a.download_btn {
+    margin: 0.5em;
   }
   #skills {
     padding: 5em;
