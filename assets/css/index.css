@@ -10,7 +10,7 @@
 body{
   margin: 0;
   overflow: auto;
-  background-image: URL("../images/news_bg.jpg");
+  background-image: URL(../images/news_bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
